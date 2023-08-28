@@ -14,7 +14,7 @@ def main():
     if not os.path.exists(OUTPUT_DIRECTORY):
         os.makedirs(OUTPUT_DIRECTORY)
 
-    # scan files in INPUT_DIRECTORY
+    # get files in INPUT_DIRECTORY
     for filename in os.listdir(INPUT_DIRECTORY):
         if filename.endswith(".png"):
             input_file_path = os.path.join(INPUT_DIRECTORY, filename)
