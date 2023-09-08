@@ -4,7 +4,7 @@
 https://qiita.com/hkambe/items/87d1aab7bdd13ecd81da  
 https://zenn.dev/siy1121/articles/5f44bcfb65ca10  
 
-```
+```python
 # 実験スクリプト冒頭で以下を呼ぶ
 from clearml import Task  
 task = Task.init(project_name='プロジェクト名', task_name='実験名') # 環境情報や標準出力は自動で記録される  
