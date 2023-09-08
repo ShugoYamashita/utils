@@ -1,6 +1,9 @@
 # ClearML  
 
-参考  
+実験管理の参考  
+https://qiita.com/nkriskeeic/items/92902ea033d72c93b6ea  
+
+ClearMLの参考  
 https://qiita.com/hkambe/items/87d1aab7bdd13ecd81da  
 https://zenn.dev/siy1121/articles/5f44bcfb65ca10  
 
