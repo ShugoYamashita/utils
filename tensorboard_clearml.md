@@ -32,3 +32,9 @@ task.logger.report_media(
         )
 ```
 
+# tensorboard  
+tensorboardの参考  
+https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101  
+https://qiita.com/kannkyo/items/3ff9c5c66c449450d7ab  
+https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101#tensorboardx-との関係  
+
