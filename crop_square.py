@@ -7,8 +7,8 @@ IMG_SIZE = 640
 
 def crop_center(img, crop_width, crop_height):
     img_width, img_height = img.size
-    return img.crop(((img_width - crop_width) // 2,(img_height - crop_height) // 2,
-        (img_width + crop_width) // 2,(img_height + crop_height) // 2))
+    return img.crop(((img_width - crop_width) // 2, (img_height - crop_height) // 2,
+        (img_width + crop_width) // 2, (img_height + crop_height) // 2))
 
 def main():
     if not os.path.exists(OUTPUT_DIRECTORY):
