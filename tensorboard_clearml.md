@@ -30,6 +30,7 @@ task.logger.report_media(
             local_path=path_to_file, # 動画像、音声、htmlファイルなど
             delete_after_upload=True,
         )
+task.task
 ```
 
 # tensorboard  
