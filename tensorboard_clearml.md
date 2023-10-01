@@ -11,9 +11,22 @@ https://qiita.com/hkambe/items/87d1aab7bdd13ecd81da
 https://zenn.dev/siy1121/articles/5f44bcfb65ca10  
 
 ```python
+classmethod init(project_name=None, task_name=None, task_type=<TaskTypes.training: 'training'>,
+tags=None, reuse_last_task_id=True, continue_last_task=False, output_uri=None,
+auto_connect_arg_parser=True, auto_connect_frameworks=True,
+auto_resource_monitoring=True, auto_connect_streams=True, deferred_init=False)
+```
+同じproject_name, task_nameのTaskを呼び出すときに、reuse_last_task_id=Falseとすると、新しいTaskが作られる。  
+既存のTaskを参照したい場合、Task.get_taskメソッドを呼び出す。
+
+```python
 # 実験スクリプト冒頭で以下を呼ぶ
-from clearml import Task  
-task = Task.init(project_name='プロジェクト名', task_name='実験名') # 環境情報や標準出力は自動で記録される  
+from clearml import Task
+# 最低限
+task = Task.init(project_name='プロジェクト名', task_name='実験名') # 環境情報や標準出力は自動で記録される
+# 推奨 同名のTaskが存在しても新しいTaskを作成。:monitor:gpuと:monitor:machineを記録しない
+task = Task.init(project_name='Project', task_name='exp', reuse_last_task_id=False, auto_resource_monitoring=False)
+
 
 # ハイパーパラメータの記録  
 hparams = {
@@ -36,7 +49,6 @@ task.logger.report_media(
 task.close()
 ```
 
-既存のTaskを参照する場合、Task.get_taskメソッドを呼び出す。
 
 # tensorboard  
 tensorboardの参考  
