@@ -10,6 +10,7 @@ https://clear.ml/docs/latest/docs/references/sdk/task/#taskcreate
 https://qiita.com/hkambe/items/87d1aab7bdd13ecd81da  
 https://zenn.dev/siy1121/articles/5f44bcfb65ca10  
 
+Task.initのdefault  
 ```python
 classmethod init(project_name=None, task_name=None, task_type=<TaskTypes.training: 'training'>,
 tags=None, reuse_last_task_id=True, continue_last_task=False, output_uri=None,
