@@ -4,6 +4,9 @@
 https://qiita.com/nkriskeeic/items/92902ea033d72c93b6ea  
 
 ClearMLの参考  
+公式チュートリアルに詳細な説明あり  
+https://clear.ml/docs/latest/docs/references/sdk/task/#taskcreate  
+日本語  
 https://qiita.com/hkambe/items/87d1aab7bdd13ecd81da  
 https://zenn.dev/siy1121/articles/5f44bcfb65ca10  
 
@@ -32,6 +35,8 @@ task.logger.report_media(
         )
 task.close()
 ```
+
+既存のTaskを参照する場合、Task.get_taskメソッドを呼び出す。
 
 # tensorboard  
 tensorboardの参考  
