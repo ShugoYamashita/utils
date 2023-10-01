@@ -18,7 +18,8 @@ auto_connect_arg_parser=True, auto_connect_frameworks=True,
 auto_resource_monitoring=True, auto_connect_streams=True, deferred_init=False)
 ```
 同じproject_name, task_nameのTaskを呼び出すときに、reuse_last_task_id=Falseとすると、新しいTaskが作られる。  
-既存のTaskを参照したい場合、Task.get_taskメソッドを呼び出す。
+既存のTaskを参照したい場合、Task.get_taskメソッドを呼び出す。  
+tensorboardで記録すればClearMLから確認できる  
 
 ```python
 # 実験スクリプト冒頭で以下を呼ぶ
