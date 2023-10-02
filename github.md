@@ -1,3 +1,12 @@
+・commit メッセージ　書き方  
+https://qiita.com/itosho/items/9565c6ad2ffc24c09364  
+
+・一度gitにアップしてもらったものを、.gitignoreに追加した場合の対処  
+https://qiita.com/fuwamaki/items/3ed021163e50beab7154  
+```
+git rm -r --cached [ファイル名]  //ファイル指定してキャッシュ削除
+```
+
 ・既存のリモートリポジトリにアップロードする場合、git pullコマンドで最新のソースコードを取得する必要がある  
 git pull origin main  
 
