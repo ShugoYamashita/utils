@@ -58,3 +58,20 @@ https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101
 https://qiita.com/kannkyo/items/3ff9c5c66c449450d7ab  
 https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101#tensorboardx-との関係  
 
+```python
+from torch.utils.tensorboard import SummaryWriter
+
+# logのdirectoryを指定
+writer = SummaryWriter(os.path.join('./log_tensorboard', exp_name))
+
+for epoch in range(epoch_start,num_epochs):
+
+    writer.add_scalars('time', {'time': one_epoch_time}, epoch+1)
+    writer.add_scalars('PSNR', {'train_psnr': train_psnr}, epoch+1)
+    writer.add_scalars('PSNR', {'val_psnr': val_psnr1}, epoch+1)
+    writer.add_scalars('SSIM', {'val_ssim': val_ssim1}, epoch+1)
+    writer.add_scalars('lr', {'lr': optimizer.param_groups[0]['lr']}, epoch+1)
+
+writer.close()
+```
+
