@@ -53,15 +53,13 @@ task.close()
 
 
 # tensorboard  
-tensorboardの参考  
-https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101  
-https://qiita.com/kannkyo/items/3ff9c5c66c449450d7ab  
-https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101#tensorboardx-との関係  
+ 
 
+tensorboardで記録する方法
 ```python
 from torch.utils.tensorboard import SummaryWriter
 
-# logのdirectoryを指定
+# logのdirectoryを指定 logの親directoryの配下にを各実験のlogを記録すると, tensorboardで見やすい
 writer = SummaryWriter(os.path.join('./log_tensorboard', exp_name))
 
 for epoch in range(epoch_start,num_epochs):
@@ -74,4 +72,21 @@ for epoch in range(epoch_start,num_epochs):
 
 writer.close()
 ```
+tensorboardを閲覧する方法  
+logの親directoryを指定するとまとめて表示できる
+```
+tensorboard --logdir="logsへのパス"
+```
+## tensorboardとtensorboardX  
+PyTorch1.1以降を使用する場合は、公式のtorch.utils.tensorboardを利用できる。  
+それ以前のversionには公式のtensorboardサポートがないので、サードパーティライブラリのtensorboardXを利用する。
 
+tensorboardXの場合、import以外は大体同じ
+```python
+from tensorboardX import SummaryWriter
+```
+
+tensorboardの参考  
+https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101  
+https://qiita.com/kannkyo/items/3ff9c5c66c449450d7ab  
+https://qiita.com/nj_ryoo0/items/f3aac1c0e92b3295c101#tensorboardx-との関係 
