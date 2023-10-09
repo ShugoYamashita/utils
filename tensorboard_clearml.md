@@ -26,7 +26,7 @@ tensorboardで記録すればClearMLから確認できる
 from clearml import Task
 # 最低限
 task = Task.init(project_name='プロジェクト名', task_name='実験名') # 環境情報や標準出力は自動で記録される
-# 推奨 同名のTaskが存在しても新しいTaskを作成。:monitor:gpuと:monitor:machineを記録しない
+# 推奨 同名のTaskが存在しても新しいTaskを作成。:monitor:gpuと:monitor:machineをデータ量が増えるので記録しないのを推奨
 task = Task.init(project_name='Project', task_name='exp', reuse_last_task_id=False, auto_resource_monitoring=False)
 
 
