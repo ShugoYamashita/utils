@@ -32,3 +32,15 @@ mv ${src_path} ${dest_path}
 rm ${file_path}
 # -r: ディレクトリを削除
 ```
+
+## gpu関係
+nvidia-smiコマンドを1秒ごとに更新する  
+watchコマンドは指定したコマンドを定期的に実行し、結果をリアルタイムで表示  
+Ctrl+Cを押して表示を終了  
+```shell
+watch -n 1 nvidia-smi
+```
+NVIDIA GPUの情報をリアルタイムでターミナルに表示
+```shell
+nvidia-smi -l 1
+```
