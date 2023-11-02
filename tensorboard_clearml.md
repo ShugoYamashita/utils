@@ -77,6 +77,16 @@ logの親directoryを指定するとまとめて表示できる
 ```
 tensorboard --logdir="logsへのパス"
 ```
+- ssh接続先でtensorboardを閲覧する方法
+オプションをつけてssh接続
+```
+ssh ユーザ名@サーバーのIPアドレス -L 6006:localhost:6006
+```
+接続後
+```
+tensorboard --logdir <logを書き込んだ場所>
+```
+
 ## tensorboardとtensorboardX  
 PyTorch1.1以降を使用する場合は、公式のtorch.utils.tensorboardを利用できる。  
 それ以前のversionには公式のtensorboardサポートがないので、サードパーティライブラリのtensorboardXを利用する。
