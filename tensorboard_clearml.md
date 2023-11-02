@@ -51,6 +51,36 @@ task.logger.report_media(
 task.close()
 ```
 
+- offlineでclearmlを使用して記録する
+```python
+from clearml import Task
+# Use the set_offline class method before initializing a Task
+Task.set_offline(offline_mode=True)
+# Initialize a Task 
+task = Task.init(project_name="examples", task_name="my_task")
+```
+consoleの出力
+```
+ClearML Task: created new task id=offline-372657bb04444c25a31bc6af86552cc9
+...
+...
+ClearML Task: Offline session stored in /home/user/.clearml/cache/offline/b786845decb14eecadf2be24affc7418.zip
+```
+
+- offlineで記録したlogをuploadする
+clearml-task CLIを使う
+```
+clearml-task --import-offline-session "/home/user/.clearml/cache/offline/b786845decb14eecadf2be24affc7418.zip"
+```
+
+Task.import_offline_session methodを使う
+```
+from clearml import Task
+
+Task.import_offline_session(
+    session_folder_zip="/home/user/.clearml/cache/offline/b786845decb14eecadf2be24affc7418.zip"
+)
+```
 
 # tensorboard  
  
