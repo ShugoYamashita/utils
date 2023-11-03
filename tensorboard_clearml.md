@@ -51,7 +51,8 @@ task.logger.report_media(
 task.close()
 ```
 
-- offlineでclearmlを使用して記録する
+- offlineでclearmlを使用して記録する  
+参考: https://clear.ml/docs/latest/docs/guides/set_offline  
 ```python
 from clearml import Task
 # Use the set_offline class method before initializing a Task
@@ -68,11 +69,12 @@ ClearML Task: Offline session stored in /home/user/.clearml/cache/offline/b78684
 ```
 
 - offlineで記録したlogをuploadする
+
 clearml-task CLIを使う
 ```
 clearml-task --import-offline-session "/home/user/.clearml/cache/offline/b786845decb14eecadf2be24affc7418.zip"
 ```
-
+参考: https://clear.ml/docs/latest/docs/apps/clearml_task/  
 Task.import_offline_session methodを使う
 ```
 from clearml import Task
