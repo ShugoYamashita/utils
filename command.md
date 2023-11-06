@@ -68,3 +68,10 @@ watch -n 1 nvidia-smi
 ```shell
 nvidia-smi -l 1
 ```
+
+- nvidia-smiをgpuメモリ使用量の行だけ表示
+```shell
+nvidia-smi | grep MiB
+```
+
+
